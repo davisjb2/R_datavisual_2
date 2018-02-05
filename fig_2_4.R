@@ -5,8 +5,8 @@ args <- commandArgs()
 x <- read.table(args[4],header=T,sep=",")
 PCA_data <- princomp(x[1:4],cor="False")
 pc.comp <- PCA_data$scores
-pc.comp1 <- -1*pc.comp[,1] # principal component 1 scores (negated for convenience)
-pc.comp2 <- -1*pc.comp[,2] # principal component 2 scores (negated for convenience)
+pc.comp1 <- -1*pc.comp[,1] 
+pc.comp2 <- -1*pc.comp[,2]
 m <- matrix(c(pc.comp1,pc.comp2),ncol=2)
 colors <- c(rep(3,150))
 png(filename="Iris2_4.png")
